@@ -1,0 +1,31 @@
+<script type="text/javascript">
+  RED.nodes.registerType('susynlv',{
+    category: 'Seismic Unix',
+    color: '#a6bbcf',
+    defaults: {
+      name: {value: ""},
+      nt:   {value: 101, validate:RED.validators.number()}
+    },
+    inputs:1,
+    outputs:1,
+    icon: "file.png",
+    label: function() {
+      return this.name||"susynlv";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="susynlv">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-nt"><i class="icon-tag"></i>Number of time samples</label>
+        <input type="text" id="node-input-nt" placeholder="Number of time samples">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="susynlv">
+    <p>SYNthetic seismograms for Linear Velocity function</p>
+</script>

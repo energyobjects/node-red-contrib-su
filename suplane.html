@@ -1,0 +1,36 @@
+<script type="text/javascript">
+  RED.nodes.registerType('suplane',{
+    category: 'Seismic Unix',
+    color: '#a6bbcf',
+    defaults: {
+      name: {value: ""},
+      npl:  {value: 3,  validate:RED.validators.number()},
+      nt:   {value: 64, validate:RED.validators.number()}
+    },
+    inputs:1,
+    outputs:1,
+    icon: "file.png",
+    label: function() {
+      return this.name||"suplane";
+    }
+  });
+</script>
+
+<script type="text/x-red" data-template-name="suplane">
+    <div class="form-row">
+        <label for="node-input-name"><i class="icon-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-npl"><i class="icon-tag"></i>Number of planes</label>
+        <input type="text" id="node-input-npl" placeholder="Number of planes">
+    </div>
+    <div class="form-row">
+        <label for="node-input-nt"><i class="icon-tag"></i>Number of time samples</label>
+        <input type="text" id="node-input-nt" placeholder="Number of time samples">
+    </div>
+</script>
+
+<script type="text/x-red" data-help-name="suplane">
+    <p>create common offset data file with up to 3 planes</p>
+</script>

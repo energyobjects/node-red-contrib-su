@@ -1,0 +1,25 @@
+{
+  "name": "node-red-contrib-su",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/energyobjects/node-red-contrib-su.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/energyobjects/node-red-contrib-su/issues"
+  },
+  "homepage": "https://github.com/energyobjects/node-red-contrib-su#readme",
+  "node-red" : {
+    "nodes": {
+      "susynlv": "susynlv.js",
+      "suplane": "suplane.js"
+    }
+  }
+}
